@@ -1,5 +1,5 @@
 # utl_classic_editor_command_macro_performance_package
-    Aligning sas display manager command macros with SAS function keys, command line and logitech's G502 Hero Mouse
+    Aligning sas display manager command macros with sas function keys, command line and logitech's G502 Hero Mouse
     %let pgm=utl_classic_editor_command_macro_performance_package;
     %let pgm=sas_saspac;
 
