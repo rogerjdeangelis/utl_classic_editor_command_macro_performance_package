@@ -80,6 +80,14 @@
     |_|  \__,_|_| |_|\___|\__|_|\___/|_| |_| |_|\_\___|\__, |___/
                                                        |___/
     */
+    
+      MMB(F1)  RMB       F2        F3            F4          F5    F6       F7          F8       F9       F10         F11        F12            
+     --------  --------  --------  -----------   ----------  ----  -------  ----------  -------- -------- ----------  --------   -------        
+     version   submit    comment   run;quit      notesubmit  conh  dmph     con         rfind    rchange  lsfh        sumv       magic          
+     shf lsa   shf ls40  shf unvh  -----------   ----------  ----  shf dmp  shf logchk  shf lsah shf avgh shf debugh  shf lsfh   shf parh       
+     ctl lsah  ctl lsh   ctl cuth  ctl sqldesh   ----------  ----  -------  ----------  -------- -------- ----------  ctl evlh   ctl tail       
+     alt rpth            alt xlrh  alt sasbatch  ----------  ----  -------  ----------  -------- -------- ----------  alt unvv   alt tailh      
+                                                                                                                                         
 
     Obs    L1L2
 
