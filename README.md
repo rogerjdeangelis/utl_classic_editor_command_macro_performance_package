@@ -72,6 +72,49 @@
     unqh        Usage: unqh sex age           Distinct counts. Usubjid must be in the datasets
     keylist     Usage: keylist                Type keylist and a list og your function keys will be in the log
     xpy         Usage: xpy roger              Type xpy roger for program banner with large font https://github.com/rogerjdeangelis/utl_program_banners
+   
+    /*   _                 _        _                         _
+     ___(_)_ __ ___  _ __ | | ___  | | _____ _   _   ___  ___| |_ ___
+    / __| | `_ ` _ \| `_ \| |/ _ \ | |/ / _ \ | | | / __|/ _ \ __/ __|
+    \__ \ | | | | | | |_) | |  __/ |   <  __/ |_| | \__ \  __/ |_\__ \
+    |___/_|_| |_| |_| .__/|_|\___| |_|\_\___|\__, | |___/\___|\__|___/
+                    |_|                      |___/
+    */
+
+
+     Some simple function keys you can easily set;
+
+    * create _last_ dataset and check it out with the simple function keys below;
+    data class;
+     set sashelp.class;
+    run;quit;
+
+    F1 %let rc=%sysfunc(dosubl('proc contents;run;'));
+
+    * UNTESTED;
+    F1 %let rc=%sysfunc(dosubl('proc means min q1 median q3 max;run;'));
+    F1 %let rc=%sysfunc(dosubl('proc print _last_(obs=40);run;'));
+    F1 %let rc=%macro cuth; %do i=1 %to 20; c "  " " " all; %end; %mend cuth;%cuth;
+
+     %macro cuth / cmd des="Usage: cuth. Hilite a block of code and type cuth and mutiple spaces will be reduced to single spaces";
+      /* USAGE
+         hilight a block of code and type cuth on command line
+        this changes two spaces to one space
+        becomes
+        1          5    3        6
+        1 5 3 6
+      */
+
+      %do i=1 %to 20;
+        c '  ' ' ' all;
+      %end;
+    %mend cuth;
+
+    * This will hep you get more on a function key. sysfunc not needed;
+
+    %macro dosubl(arg);
+      %let rc=%qsysfunc(dosubl(&arg));
+    %mend dosubl;
 
     /*__                  _   _               _
      / _|_   _ _ __   ___| |_(_) ___  _ __   | | _____ _   _ ___
@@ -88,7 +131,8 @@
      ctl lsah  ctl lsh   ctl cuth  ctl sqldesh   ----------  ----  -------  ----------  -------- -------- ----------  ctl evlh   ctl tail       
      alt rpth            alt xlrh  alt sasbatch  ----------  ----  -------  ----------  -------- -------- ----------  alt unvv   alt tailh      
                                                                                                                                          
-
+    * There are some isshes here. The keylist macro needs work;
+    
     Obs    L1L2
 
       1    F1 home;_sv;
