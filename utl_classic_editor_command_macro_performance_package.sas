@@ -745,7 +745,7 @@ title;
    store;note;notesubmit '%tailha;';
 %mend tailh;
 
-%macro tailha:
+%macro tailha;
   FILENAME clp clipbrd ;
   DATA _NULL_;
     INFILE clp;
